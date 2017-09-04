@@ -1,0 +1,10 @@
+<!--
+==========================
+REMOTE COMPILATION SECTION
+==========================
+-->    
+<target name="remote-compile" depends="compile" description="Compile Remote Class."/>        
+    <rmic base="${build.dir}" stubversion="1.5" verify="true" compiler="sun">
+        <fileset dir="${build.dir}" includes="${remote.classes.includes}"/>        
+    </rmic>
+</target>
